@@ -1,0 +1,241 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:72aed958-e628-49a7-ab37-da6343995e12",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-04-21T12:46:09.533676+00:00",
+    "tools": [
+      {
+        "vendor": "Software Provenance Tracker",
+        "name": "provenance-sbom-generator",
+        "version": "0.1.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "django",
+      "version": "scan-27"
+    },
+    "properties": [
+      {
+        "name": "provenance:scan_id",
+        "value": "27"
+      },
+      {
+        "name": "provenance:ecosystem",
+        "value": "pypi"
+      },
+      {
+        "name": "provenance:file_type",
+        "value": "requirements.txt"
+      },
+      {
+        "name": "provenance:total_packages",
+        "value": "5"
+      },
+      {
+        "name": "provenance:direct_dependencies",
+        "value": "1"
+      },
+      {
+        "name": "provenance:scan_status",
+        "value": "completed"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "django",
+      "version": "6.0.4",
+      "purl": "pkg:pypi/django@6.0.4",
+      "bom-ref": "pkg:pypi/django@6.0.4",
+      "scope": "required",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/django/django"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4e8e29f22f126deca723f0801020f82dfccc9cd78c49cae67d9caeecffc2501a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "39.6"
+        },
+        {
+          "name": "provenance:flags_triggered",
+          "value": "KNOWN_CVE"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "ceef025d8bd69d16ab83ba9a26491c485a25191310bd789a2618e79ef61beadb"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "asgiref",
+      "version": "3.11.1",
+      "purl": "pkg:pypi/asgiref@3.11.1",
+      "bom-ref": "pkg:pypi/asgiref@3.11.1",
+      "scope": "optional",
+      "author": "Django Software Foundation",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/django/asgiref/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8df3592b33b240bb3c21e81fcf21b817a9738ea14401d01fc0d7fe087349ad8b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "4152665ee0342707ae4010222b77b5a7a455cf45965ac9822a16f2661742f38a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "purl": "pkg:pypi/typing-extensions@4.15.0",
+      "bom-ref": "pkg:pypi/typing-extensions@4.15.0",
+      "scope": "optional",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/python/typing_extensions"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4249e3364df1a42b38512259fd7028c111414cbd51280a6198fc0e1f5146d385"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "750e7c0a11c1b0a3fb14b0a3d2dcdfdba8ae86aec53c67b5a709c1d7d5d03eb4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sqlparse",
+      "version": "0.5.5",
+      "purl": "pkg:pypi/sqlparse@0.5.5",
+      "bom-ref": "pkg:pypi/sqlparse@0.5.5",
+      "scope": "optional",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/andialbrecht/sqlparse"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2f4d5048dc6e3056f1649c3363d4dd7697bdec414e61fa920c3345fa8970e596"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "0cfa390df413ed91b7104c8278ec8b6ea092df95b596446da3aa8e1fa644bde1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tzdata",
+      "version": "2026.1",
+      "purl": "pkg:pypi/tzdata@2026.1",
+      "bom-ref": "pkg:pypi/tzdata@2026.1",
+      "scope": "optional",
+      "author": "Python Software Foundation",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/python/tzdata"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ea5c54fc0fda7a80c16e332c4c34d3966e485f1b955ba8c92d01a6c8d1afc6f1"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "b48f30719bbfee1db782f802db3d0f970ed07511e8a709a1cd7b69cf17e421d1"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/django@6.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/asgiref@3.11.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.15.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/sqlparse@0.5.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/tzdata@2026.1",
+      "dependsOn": []
+    }
+  ]
+}

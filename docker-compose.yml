@@ -1,0 +1,90 @@
+version: "3.8"
+
+services:
+  # ─────────────────────────────────────────────
+  # PostgreSQL 18 — Relational store
+  # Stores: contributor baselines, anomaly scores,
+  #         alerts, provenance ledger, scan history
+  # ─────────────────────────────────────────────
+  postgres:
+    image: postgres:18-alpine
+    container_name: provenance_postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-provenance_db}
+      POSTGRES_USER: ${POSTGRES_USER:-provenance}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-provenance} -d ${POSTGRES_DB:-provenance_db}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ─────────────────────────────────────────────
+  # Neo4j 5 Community — Graph database
+  # Stores: dependency graph (Package nodes,
+  #         DEPENDS_ON edges, Contributor nodes)
+  # ─────────────────────────────────────────────
+  neo4j:
+    image: neo4j:5-community
+    container_name: provenance_neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474" # Browser UI
+      - "7687:7687" # Bolt protocol
+    environment:
+      NEO4J_AUTH: ${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:?NEO4J_PASSWORD is required}
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_server_memory_heap_initial__size: "512m"
+      NEO4J_server_memory_heap_max__size: "512m"
+      NEO4J_server_memory_pagecache_size: "512m"
+    volumes:
+      - neo4jdata:/data
+      - neo4jlogs:/logs
+    healthcheck:
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1" ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 45s
+
+  # ─────────────────────────────────────────────
+  # Redis 7 — Cache layer
+  # Caches: GitHub API responses, PyPI/npm
+  #         registry responses to stay within
+  #         rate limits
+  # ─────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: provenance_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass ${REDIS_PASSWORD:?REDIS_PASSWORD is required} --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  pgdata:
+    driver: local
+  neo4jdata:
+    driver: local
+  neo4jlogs:
+    driver: local
+  redisdata:
+    driver: local
+
+networks:
+  default:
+    name: provenance_network

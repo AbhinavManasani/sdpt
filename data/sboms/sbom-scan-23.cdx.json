@@ -1,0 +1,334 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:0b61ef10-4012-4c9f-8b9b-3fe0248a127a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-04-12T17:10:31.667583+00:00",
+    "tools": [
+      {
+        "vendor": "Software Provenance Tracker",
+        "name": "provenance-sbom-generator",
+        "version": "0.1.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "sbom-test",
+      "version": "scan-23"
+    },
+    "properties": [
+      {
+        "name": "provenance:scan_id",
+        "value": "23"
+      },
+      {
+        "name": "provenance:ecosystem",
+        "value": "pypi"
+      },
+      {
+        "name": "provenance:file_type",
+        "value": "requirements.txt"
+      },
+      {
+        "name": "provenance:total_packages",
+        "value": "8"
+      },
+      {
+        "name": "provenance:direct_dependencies",
+        "value": "1"
+      },
+      {
+        "name": "provenance:scan_status",
+        "value": "completed"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "httpx",
+      "version": "0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/encode/httpx"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "04ca2b061c21b7386b4e81453e015ba62d5ecf4f9adbd0c4ff46922e6c4dbdfe"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "9db4ba3a96e5124f59a15ea39e526f8919a5dad6f91ff9ec07d6ac702162bf0b"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "anyio",
+      "version": "4.13.0",
+      "purl": "pkg:pypi/anyio@4.13.0",
+      "bom-ref": "pkg:pypi/anyio@4.13.0",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "90fcfe822cebf5427968121ccb67a95677e4e8b95d4437cd84a44e04c8270468"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "862824bd8d57d37e1ca5283b3931e9998fe87208e000c7410da64d30931d8573"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "exceptiongroup",
+      "version": "1.3.1",
+      "purl": "pkg:pypi/exceptiongroup@1.3.1",
+      "bom-ref": "pkg:pypi/exceptiongroup@1.3.1",
+      "scope": "optional",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d4348120cd4ecf0de1849d6a8ea698fececae312e6feeb0572772d55eb604869"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "4d306576778fa5219c25499706c49721f3d03a47cf721cd692701a6c91354b2e"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "purl": "pkg:pypi/typing-extensions@4.15.0",
+      "bom-ref": "pkg:pypi/typing-extensions@4.15.0",
+      "scope": "optional",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/python/typing_extensions"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4249e3364df1a42b38512259fd7028c111414cbd51280a6198fc0e1f5146d385"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "be51de37c802bfcfbbce4ee4ede58ca2d576984f319cb060f611178797b54a56"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "certifi",
+      "version": "2026.2.25",
+      "purl": "pkg:pypi/certifi@2026.2.25",
+      "bom-ref": "pkg:pypi/certifi@2026.2.25",
+      "scope": "optional",
+      "author": "Kenneth Reitz",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPL-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/certifi/python-certifi"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e8ebdca2551c5ae0fe108c901bc76a90f56f97c4e4090c34caab4a32f63dd7ee"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "7b0141f329fcfa3eb5b5019261a76a27b675f00dde7bb998a8d17e3273baadf5"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "scope": "optional",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/encode/httpcore"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "34b11da5f745006058405a05193cabc4d407a0530dbc450a7206ddfe2e8fc390"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "f3250b3033f9f0faea9b50e87707b0f2849e4a64630224fa36573bbc4fc3d812"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "h11",
+      "version": "0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "scope": "optional",
+      "author": "Nathaniel J. Smith",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/python-hyper/h11"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "44a28cd266c06402b2c90be72ff5990efa34b8463d3d892e7274cbff4ce28f48"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "37a8846bb5360bf75f2610cf6f1ad7ae24808fcb0fe463699f62419797562dfa"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "idna",
+      "version": "3.11",
+      "purl": "pkg:pypi/idna@3.11",
+      "bom-ref": "pkg:pypi/idna@3.11",
+      "scope": "optional",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/kjd/idna"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0f546bcc773b4a474b786239f535e4753c02009a6c5aa617998566b26cd8618c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "provenance:anomaly_score",
+          "value": "18.1"
+        },
+        {
+          "name": "provenance:ledger_hash",
+          "value": "1e77018e804b00335de6853337173c9da4833a3aa840fc3a39ea6b74b375b82e"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/httpx@0.28.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/anyio@4.13.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/exceptiongroup@1.3.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.15.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/certifi@2026.2.25",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpcore@1.0.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/h11@0.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/idna@3.11",
+      "dependsOn": []
+    }
+  ]
+}
